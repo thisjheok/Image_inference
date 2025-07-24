@@ -3,7 +3,7 @@ from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import JSONResponse
 from PIL import Image
 import io
-from api.inference import predict_image
+from .api.inference import predict_image  # 상대 경로로 변경
 
 app = FastAPI()
 
