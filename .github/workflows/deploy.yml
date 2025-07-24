@@ -31,4 +31,4 @@ jobs:
           docker pull ${{ secrets.DOCKER_USERNAME }}/fastapi-inference:latest
           docker stop inference || true
           docker rm inference || true
-          docker run -d --name inference -p 80:8000 ${{ secrets.DOCKER_USERNAME }}/fastapi-inference:latest
+          docker run -d --name inference -p 8000:8000 ${{ secrets.DOCKER_USERNAME }}/fastapi-inference:latest
